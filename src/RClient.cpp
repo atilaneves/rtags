@@ -1032,6 +1032,7 @@ bool RClient::parse(int &argc, char **argv)
                     p.append('/');
                 }
             }
+            p.resolve();
             QueryMessage::Type type = QueryMessage::Invalid;
             switch (opt->option) {
             case Dependencies: type = QueryMessage::Dependencies; break;
